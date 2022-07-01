@@ -18,18 +18,20 @@ public class CallCheese {
         switch (pay1) {
             case 1 -> {
                 float sum = pp.getPriceCheese() + pp.getPriceDelivery();
-                System.out.println("Selected Money... "              + "\n" +
-                        "Pizza Price: " + pp.getPriceCheese()        + "\n" +
-                        "Delivery price: " + pp.getPriceDelivery()   + "\n" +
+                System.out.println("Selected Money... "            + "\n" +
+                        "Pizza Price: " + pp.getPriceCheese()      + "\n" +
+                        "Delivery price: " + pp.getPriceDelivery() + "\n" +
                         "Total Value: " + sum);
                 cb.CallConfirmBuy();
-                System.out.println("Invoice: "+ "\n" );
-                System.out.print("Client name: "); nb.CallName();
-                System.out.print("Phone Number: "); nb.CallNumber();
+                System.out.println("Invoice: " + "\n");
+                System.out.print("Client name: ");
+                nb.CallName();
+                System.out.print("Phone Number: ");
+                nb.CallNumber();
                 System.out.println(
-                        "Pizza Price: " + pp.getPriceCheese()     + "\n" +
-                        "Delivery price: " + pp.getPriceDelivery()   + "\n" +
-                        "Total Value: " + sum + "\n--------------------");
+                        "Pizza Price: " + pp.getPriceCheese()              + "\n" +
+                                "Delivery price: " + pp.getPriceDelivery() + "\n" +
+                                "Total Value: " + sum + "\n--------------------");
             }
             case 2 -> {
                 float sum = pp.getPriceCheese() + pp.getPriceDelivery() + pp.getPriceCardInterest();
@@ -40,15 +42,17 @@ public class CallCheese {
                         "Total Value: " + sum
                 );
                 cb.CallConfirmBuy();
-                System.out.println("Invoice: "+ "\n" );
-                System.out.print("Client name: "); nb.CallName();
-                System.out.print("Phone Number: "); nb.CallNumber();
-                System.out.println(
-                        "Pizza Price: " + pp.getPriceCheese()        + "\n" +
-                        "Delivery price: " + pp.getPriceDelivery()   + "\n" +
-                        "CardInterest: " + pp.getPriceCardInterest() + "\n" +
-                        "Total Value: " + sum                        + "\n" +
-                        "--------------------");
+                if (cb.equals(true)) {
+                    System.out.println("Invoice: " + "\n");
+                    System.out.print("Client name: "); nb.CallName();
+                    System.out.print("Phone Number: "); nb.CallNumber();
+                    System.out.println(
+                            "Pizza Price: " + pp.getPriceCheese()        + "\n" +
+                            "Delivery price: " + pp.getPriceDelivery()   + "\n" +
+                            "CardInterest: " + pp.getPriceCardInterest() + "\n" +
+                            "Total Value: " + sum                        + "\n" +
+                            "--------------------");
+                }
             }
         }
     }

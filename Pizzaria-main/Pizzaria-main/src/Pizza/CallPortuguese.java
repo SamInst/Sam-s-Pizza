@@ -33,22 +33,24 @@ public class CallPortuguese {
             }
             case 2 -> {
                 float sum = pp.getPricePortuguese() + pp.getPriceDelivery() + pp.getPriceCardInterest();
-                System.out.println(" Selected Credit Card..."        + "\n" +
-                        "Pizza Price: " + pp.getPricePortuguese()    + "\n" +
-                        "Delivery price: " + pp.getPriceDelivery()   + "\n" +
+                System.out.println(" Selected Credit Card..." + "\n" +
+                        "Pizza Price: " + pp.getPricePortuguese() + "\n" +
+                        "Delivery price: " + pp.getPriceDelivery() + "\n" +
                         "CardInterest: " + pp.getPriceCardInterest() + "\n" +
                         "Total Value: " + sum
                 );
                 cb.CallConfirmBuy();
-                System.out.println("Invoice: "+ "\n" );
-                System.out.print("Client name: "); nb.CallName();
-                System.out.print("Phone Number: "); nb.CallNumber();
-                System.out.println(
-                        "Pizza Price: " + pp.getPricePortuguese()     + "\n" +
-                        "Delivery price: " + pp.getPriceDelivery()   + "\n" +
-                        "CardInterest: " + pp.getPriceCardInterest() + "\n" +
-                        "Total Value: " + sum                        + "\n" +
-                        "--------------------");
+                if (cb.equals(true)) {
+                    System.out.println("Invoice: " + "\n");
+                    System.out.print("Client name: "); nb.CallName();
+                    System.out.print("Phone Number: "); nb.CallNumber();
+                    System.out.println(
+                            "Pizza Price: " + pp.getPricePortuguese() + "\n" +
+                                    "Delivery price: " + pp.getPriceDelivery() + "\n" +
+                                    "CardInterest: " + pp.getPriceCardInterest() + "\n" +
+                                    "Total Value: " + sum + "\n" +
+                                    "--------------------");
+                }
             }
         }
     }
